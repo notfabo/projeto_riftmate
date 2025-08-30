@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+body { margin: 0; }
+
+@layer utilities {
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+}
+
+@theme {  
+    --color-background: #1A1225;       
+    --color-card: #2C233D;              
+    --color-text-base: #F5F0FF;         
+    --color-accent-rakan: #FFB86C;   
+    --color-accent-xayah: #E75A9C;      
+
+    --color-ionia-bg: #1C204B;
+    --color-ionia-card: #3D447B;
+    --color-ionia-text: #F8F8F2;
+    --color-ionia-rakan: #F1FA8C;
+    --color-ionia-xayah: #FF79C6;
+
+    --color-light-bg: #FDF6E3;
+    --color-light-card: #EAE2D3;
+    --color-light-text: #4A4238;
+    --color-light-rakan: #D97F30;
+    --color-light-xayah: #8C3A69;
+}
