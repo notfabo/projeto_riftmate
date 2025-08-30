@@ -39,9 +39,9 @@ export const ProfilePage: React.FC = () => {
     fetchAllData();
   }, [region, riotId, tag]);
 
-  if (isLoading) return <div className="bg-gray-900 min-h-screen text-[var(--color-text-base)] text-center p-10"><LoadingSpinner message="Carregando perfil do jogador..." /></div>;
-  if (error) return <div className="bg-gray-900 min-h-screen text-[var(--color-text-base)] text-center p-10">Erro: {error}</div>;
-  if (!playerData) return <div className="bg-gray-900 min-h-screen text-[var(--color-text-base)] text-center p-10">Nenhum dado de jogador encontrado.</div>;
+  if (isLoading) return <div className="bg-[var(--color-background)] min-h-screen text-[var(--color-text-base)] text-center p-10"><LoadingSpinner message="Carregando perfil do jogador..." /></div>;
+  if (error) return <div className="bg-[var(--color-background)] min-h-screen text-[var(--color-text-base)] text-center p-10">Erro: {error}</div>;
+  if (!playerData) return <div className="bg-[var(--color-background)] min-h-screen text-[var(--color-text-base)] text-center p-10">Nenhum dado de jogador encontrado.</div>;
 
   const soloRank = playerData.league.find(l => l.queueType === 'RANKED_SOLO_5x5');
   const mainChampionKey = playerData.mainChampionKey;
